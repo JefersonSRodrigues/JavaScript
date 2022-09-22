@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Geometria</title>
+        <style>
+            body{
+                max-width: 700px;
+                margin: auto;
+                background-color: rgba(0, 0, 50, 0.200);
+            }
+            h1{
+                text-align: center;
+            }
+            input{
+                width: 80px;
+            }
+            fieldset{
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.589);
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Área do triângulo</h1>
+        <fieldset>
+            <h2>Insira os valores relacionados:</h2>
+            <p>Base:  
+                <input type="number" id="base">
+            </p>
+            <p>Altura: <input type="number" id="altura">
+            <input type="button" value="calcular" onmousedown="tria()">
+            </p>
+            <p id="resultado">Resultado: __</p>
+        </fieldset>
+
+        <h1>Perímetro do triângulo</h1>
+        <fieldset>
+            <p>Insira os valores dos lados do triângulo: </p>
+            <input type="number"  id="ladoa">
+            <input type="number"  id="ladob">
+            <input type="number"  id="ladoc">
+            <p> <input type="button" value="calcular" onmousedown="pertri()"> </p>
+            <p id="resultado2">Resultado : __</p>
+        </fieldset>
+        <script>
+            function tria(){
+            var base = window.document.getElementById('base')
+            base = parseInt(base.value)
+            var altura = window.document.getElementById('altura')
+            altura = parseInt(altura.value)
+            var result = window.document.getElementById('resultado')
+
+            calculoarea = (base * altura) / 2
+            resultado.innerText = calculoarea
+            }
+            function pertri(){
+                var a = window.document.getElementById('ladoa')
+                var b = window.document.getElementById('ladob') 
+                var c = window.document.getElementById('ladoc')
+                a = parseInt(ladoa.value)
+                b = parseInt(ladob.value)
+                c = parseInt(ladoc.value)
+                var res = window.document.getElementById('resultado2')
+                var per = a + b + c
+                res.innerText = per
+            }
+        </script>
+    </body>
+</html>

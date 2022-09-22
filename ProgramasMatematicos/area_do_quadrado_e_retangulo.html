@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                max-width: 700px;
+                margin: auto;
+                background-color: rgba(0, 0, 50, 0.200);
+            }
+            fieldset{
+                text-align: center;
+                background-color: rgba(255, 255, 255, 0.589);
+                margin: 0px;
+                padding: 0px;
+            }
+            h1 {
+                background-color: rgba(255, 255, 255, 0.589);
+                text-align: center;
+            }
+            h2{
+                margin-bottom: 20px;
+            }
+            #descricao{
+                margin-bottom: 15px;
+            }
+            input {
+                width: 80px;
+            }
+        </style>
+        <title>Geometria</title>
+    </head>
+    <body>
+        <h1>Área do quadrado e do Retângulo</h1>
+        <fieldset>
+            <fieldset>
+                <label for="quadrado">
+                <h2>Quadrado</h2>
+                <p id="descricao">
+                    Digite o valor : 
+                    <input type="number" id="lado"> 
+                    <input type="button" value="calcular" onclick="elevar()">
+                    <br>
+                </p>
+                <p>A área do quadrado é :</p>    
+                
+                <p id="resposta"> Resultado: __</p>
+            </label>
+            </fieldset>
+
+            <fieldset>
+            <label for="retangulo">
+            <h2>Retângulo</h2>
+                <p>Digite o valor da base : <input type="number" id="base"> 
+                <p>Digite o valor da altura : <input type="number" id="altura">
+                <input type="button" value="calcular" onclick="bh()">
+                </p>
+                <p>A área do retângulo é :</p>
+                <p id="resposta2">Resultado: __</p>
+            </label>
+        </fieldset>
+
+        <script>
+            function elevar() {
+                var lado = window.document.getElementById('lado')
+                var resposta = window.document.getElementById('resposta')
+                var lado = parseInt(lado.value)
+                lado **= 2
+                resposta.innerHTML = lado
+            }
+
+            function bh() {
+                var base = window.document.getElementById('base')
+                base = parseInt(base.value)
+                var altura = window.document.getElementById('altura')
+                altura = parseInt(altura.value)
+                var resposta2 = window.document.getElementById('resposta2')
+                var res2 = base * altura
+                resposta2.innerHTML = res2
+            }
+        </script>
+    </body>
+</html>
